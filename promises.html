@@ -1,0 +1,85 @@
+<style>
+     .container{
+         margin-left: 1rem;
+         font-size: 2rem;
+         color: whitesmoke;
+     }
+ 
+     body{
+         background-color: black;
+         background-image: url(burgirrr.jpg);
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: 100%;
+     }
+ 
+     #one{
+         font-size: 5rem;
+         color: rgb(239, 210, 79);
+        /* margin-left: 20rem; */
+     }
+ </style>
+ 
+ 
+ <body>
+ 
+     <div class="container">
+ <h1 id="one"> <center>Burgirrrrr🍔</center></h1>
+    For veg enter->1 and for non veg enter->2  <input type="number" id="num"><br>
+ 
+     <button onclick="recipe1(document.getElementById('num').value)">Recipe</button>
+         <p id="p1"></p>
+         <p id="p2"></p>
+         <p id="p3"></p>
+         <p id="p4"></p>
+         <p id="p5"></p>
+         <p id="p6"></p>
+         <p id="p7"></p>
+         <p id="p8"></p>
+         <p id="p9"></p>
+         <p id="p10"></p> 
+ 
+         </div>
+ 
+     <script>
+         function recipe1(num){
+            let p = new Promise((resolve, reject) => {
+        if(num==1){
+            resolve('Success');
+        }else if(num==2){
+            reject('failed')
+        }
+    }
+    )
+
+     if(num>2 || num<1)
+             alert('Enter valid input');
+             p.then((messege) =>
+         {
+         document.getElementById("p1").innerHTML="Bring veg burger patty from store and follow package instructions";
+         document.getElementById("p2").innerHTML="Preheat your grill or a pan over medium-high heat";
+         document.getElementById("p3").innerHTML=" Cook the veggie burger patties according to the package instructions";
+         document.getElementById("p4").innerHTML="Cut the burger buns in half,lightly toast the buns";
+         document.getElementById("p5").innerHTML="Place a lettuce leaf on the bottom half of each bun";
+         document.getElementById("p6").innerHTML="Place a patty on top of the lettuce";
+         document.getElementById("p7").innerHTML="Add cheese on top of the patty";
+         document.getElementById("p8").innerHTML="Add a slice of tomato and onion";
+         document.getElementById("p9").innerHTML="Add your choice of condiments on top of bun";
+         document.getElementById("p10").innerHTML="Serve and njaaay:)";
+         }).catch((messege) =>
+         {
+         document.getElementById("p1").innerHTML="Season the ground meat with salt and pepper to taste and shape it into patties";
+         document.getElementById("p2").innerHTML="Preheat your grill or a pan over medium-high heat";
+         document.getElementById("p3").innerHTML="Cook the meat patties for about 3-4 minutes per side";
+         document.getElementById("p4").innerHTML="Cut the burger buns in half,lightly toast the buns";
+         document.getElementById("p5").innerHTML="Place a lettuce leaf on the bottom half of each bun";
+         document.getElementById("p6").innerHTML="Place a patty on top of the lettuce";
+         document.getElementById("p7").innerHTML="Add cheese on top of the patty";
+         document.getElementById("p8").innerHTML="Add a slice of tomato and onion";
+         document.getElementById("p9").innerHTML="Add ketchup and mustard to the top bun";
+         document.getElementById("p10").innerHTML="Serve and njaaay:)";
+         })
+         }
+     </script>
+ </body>
+ </html>  
